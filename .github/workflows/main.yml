@@ -9,7 +9,7 @@ jobs:
           
       - name: Install and Build 🔧 
         run: |
-          npx browserslist@latest --update-db
+          npm audit fix --force
           npm install
           npm run build
       - name: GitHub Pages
