@@ -9,6 +9,7 @@ jobs:
           
       - name: Install and Build 🔧 
         run: |
+          npx browserslist@latest --update-db
           npm install
           npm run build
       - name: GitHub Pages
