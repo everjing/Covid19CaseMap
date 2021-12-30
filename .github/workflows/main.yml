@@ -9,7 +9,6 @@ jobs:
           
       - name: Install and Build 🔧 
         run: |
-          npm audit fix --force
           npm install
           npm run build
       - name: GitHub Pages
