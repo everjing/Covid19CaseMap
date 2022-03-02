@@ -22,6 +22,8 @@ class CovidMap extends Component {
        points: {} // saved all points from the API
    };
 
+
+
   render() {
     return (
       // Important! Always set the container height explicitly
@@ -45,7 +47,7 @@ class CovidMap extends Component {
     );
   }
 
-  // ES2017 async await
+    // ES2017 async await
   async handleMapInitialized() {
       try {
       const response = await CovidCaseService.getUsData() // Promise
@@ -60,7 +62,7 @@ class CovidMap extends Component {
   
   renderPoints() {
     const clusterPoints = this.state.points[this.state.zoom];
-    console.log(clusterPoints);
+    //console.log(clusterPoints);
     const result = [];
     if (!clusterPoints) {
         return result;
@@ -90,18 +92,15 @@ class CovidMap extends Component {
                 </Marker>
             );
         }
-        if (result.length >= this.limit) {
+        if (result.length >= 15) {
             break;
         }
      }
     }
-
-    console.log(result);
+    //console.log(result);
     return result;
-}
+  }
  
 }
-
-
 
 export default CovidMap;

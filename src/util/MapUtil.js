@@ -21,11 +21,11 @@ export const MapUtil = {
             states[point.province].deaths += point.stats.deaths;
             states[point.province].coordinates = point.coordinates;
         }
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 8; i++) {
             result[i] = states;
         }
 
-        for (let i = 11; i <= 20; i++) {
+        for (let i = 9; i <= 20; i++) {
             result[i] = points;
         }
         return result;
