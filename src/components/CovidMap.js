@@ -92,7 +92,7 @@ class CovidMap extends Component {
                 </Marker>
             );
         }
-        if (result.length >= 20) {//max number of cards showing in map
+        if (result.length >= 15) {//max number of cards showing in map
             break;
         }
      }
